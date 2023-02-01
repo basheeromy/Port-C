@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int main(void)
 {
@@ -20,7 +19,7 @@ int main(void)
     
     for (int i = 0; i < elements; i++)
     {
-        printf("%i,",array[i]);
+        printf("%i ",array[i]);
     }
     printf("\n");
 }
