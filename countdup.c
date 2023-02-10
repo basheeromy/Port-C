@@ -30,7 +30,7 @@ int main(void)
             if(array[j] == array[i])
             {
                 exit = true;
-                continue;
+                break;
                 
             }
         }
