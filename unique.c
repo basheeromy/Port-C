@@ -20,13 +20,28 @@ int main(void)
         scanf("%d", &array[i]);
     }
 
-    // declare array with name uniq to store unique elements.
-
-    int uniq[length];
-
     // find unique elements and store in to uniq array.
 
-    int b = 1;
+    printf("Unique elements in given array are : ");
+
+    bool unq = true;
+
+    for(int s = 1; s < length; s++)
+    {
+        if( array[s] == array[0])
+        {
+            unq = false;
+            break;
+        }
+
+    }
+
+    if(unq == true)
+    {
+
+        printf("%i ",array[0] );
+        
+    }
 
     for(int i = 1; i < length; i++ )
     {
@@ -62,36 +77,12 @@ int main(void)
         }
 
         // as array[i] is a unique element. add to uniq array.
-        uniq[b] = array[i] ;
-        b++;
+        printf("%i ", array[i]);
 
         
 
     }
-    bool unq = true;
 
-    for(int s = 1; s < length; s++)
-    {
-        if( array[s] == array[0])
-        {
-            unq = false;
-            break;
-        }
-
-    }
-
-    if(unq == true)
-    {
-        uniq[0] = array[0];
-    }
-
-    // print unique elements.
-
-    printf("Unique elements in given array are : ");
-    for(int l = 0; l < length; l++)
-    {
-        printf("%i ",uniq[l]);
-    }
     printf("\n");
     return 0;
 }
