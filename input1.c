@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define MAX 30
 
 int main()
 {
@@ -36,10 +37,19 @@ int main()
     take input as different data types like integer, double etc..
     fgets just take input as a general string. let's check it out...
      */
-    char names[30];
+    char names[MAX];
     printf("Enter your name: ");
-    fgets(names, 30, stdin);
-    printf("your name is %s", names);
+    fgets(names, MAX, stdin);
+    printf("your name is %s\n", names);
+
+    /* here fgets will not work as it comes after multiple scanf functions,
+    scanf fuction is not buffer over flow proteced and it will write a new 
+    line character each time in buffer and whenever we call it. also even scanf
+    not take values after space. it will write those values in buffer. we can see 
+    this by giving space included input for name scanf taking as input. fgets will
+    take that value and write to names.*/
+
+    
 
 
     return 0;

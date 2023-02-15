@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define MAX 15
+#define MAX 30
 
 // this simple program is meant to try fgets function 
 
