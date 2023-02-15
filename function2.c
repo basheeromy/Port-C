@@ -21,4 +21,5 @@ void sum(int num1,int num2)
 {
     int total = num1 + num2;
     printf("The sum of number given is : %i\n", total);
+    
 }
